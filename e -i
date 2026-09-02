@@ -1,0 +1,77 @@
+[33mcommit dc957febb2692965acb4166c4a1351dc561cc2f2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Wed Sep 2 22:06:57 2026 +0200
+
+    Remove .env from tracking
+
+[33mcommit 85bf575c0fc604bf488ac5e0ecd1fadbe32ad3d0[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Wed Sep 2 22:04:32 2026 +0200
+
+    Just Update
+
+[33mcommit c762fe7e48bde47e63994ea143e6005c5337fd75[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Wed Sep 2 22:02:31 2026 +0200
+
+    Just Update
+
+[33mcommit 4f0227a47d86c59c4eba53dc91eb3b7968db51ad[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Wed Sep 2 21:59:23 2026 +0200
+
+    Just Update
+
+[33mcommit b43405be4e294d88b466b65a19fa40cdb6442a2a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Mon Jul 6 01:01:43 2026 +0200
+
+    Deleting node_module
+
+[33mcommit f7e05dcfce99dd4766fe1fafa26993510f11f520[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Mon Jul 6 00:59:13 2026 +0200
+
+    Staring a backend Server
+
+[33mcommit b41e9a2934d6b6c8ef3ec4407b245643da82fc2c[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Sat Jul 4 23:57:53 2026 +0200
+
+    BaCK
+
+[33mcommit 3cd2fca388f1e08819bb4213e1b933cb82b65d83[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Thu Jun 4 14:41:57 2026 +0200
+
+    ui Design
+
+[33mcommit 60c122ec339951165f0fd43e8dfbd15c691ffc1b[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Mon Jun 1 17:14:21 2026 +0200
+
+    charts
+
+[33mcommit de47737c2423e02f68d9e1f5dcfbe4ec4b7188a0[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Sun May 31 23:15:49 2026 +0200
+
+    adding charts
+
+[33mcommit 379ac08a8c03a7eca2b72dc874a391e2f0dbe2bb[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Fri May 29 22:41:54 2026 +0200
+
+    nav bar and site bar
+
+[33mcommit 2f689cae0ac433f5b43b5bbbfcd6c42ea254d44a[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Tue May 26 22:57:20 2026 +0200
+
+    initial code
+
+[33mcommit a15f9197691061ed08ee40a3690933de0930da16[m
+Author: Clement Mukhale <xenobyte012@gmail.com>
+Date:   Tue May 26 22:56:49 2026 +0200
+
+    first commit
