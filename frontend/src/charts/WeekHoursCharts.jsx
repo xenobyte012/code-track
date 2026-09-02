@@ -1,65 +1,70 @@
-import { TrendingUp } from "lucide-react";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  LabelList,
-} from "recharts";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { Bar, BarChart, CartesianGrid, XAxis, LabelList } from "recharts";
 
 const chartData = [
-  { month: "Mon", desktop: 186 },
-  { month: "Tue", desktop: 305 },
-  { month: "Wen", desktop: 237 },
-  { month: "Thu", desktop: 73 },
-  { month: "Fri", desktop: 209 },
-  { month: "Sat", desktop: 214 },
-  { month: "Sun", desktop: 214 },
+  { day: "Mon", hours: 4 },
+  { day: "Tue", hours: 7 },
+  { day: "Wed", hours: 5 },
+  { day: "Thu", hours: 2 },
+  { day: "Fri", hours: 6 },
+  { day: "Sat", hours: 8 },
+  { day: "Sun", hours: 9 },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "var(--chart-1)",
+  hours: {
+    label: "Hours",
+    color: "#60a5fa", // blue-400
   },
 };
 
 export default function WeekHoursCharts() {
   return (
-    <Card className="border border-slate-950 ">
-      <CardHeader>
-        <CardTitle>Weelkly Coding Hours</CardTitle>
+    <Card className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-lg font-semibold text-gray-200">
+          Weekly Coding Hours
+        </CardTitle>
       </CardHeader>
-
-      <CardContent className="">
-        <ChartContainer config={chartConfig} className="h-50 w-full ">
-          <BarChart data={chartData}>
-            <CartesianGrid vertical={false} horizontal={false} />
-
-            <XAxis
-              dataKey="month"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
+      <CardContent>
+        <ChartContainer config={chartConfig} className="h-52 w-full">
+          <BarChart
+            data={chartData}
+            margin={{ top: 20, right: 5, left: 0, bottom: 5 }}
+          >
+            <CartesianGrid
+              vertical={false}
+              strokeDasharray="3 3"
+              stroke="#334155"
             />
-
-            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4}>
+            <XAxis
+              dataKey="day"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={10}
+              tick={{ fill: "#94a3b8", fontSize: 12 }}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={
+                <ChartTooltipContent className="bg-slate-800 border border-slate-700 rounded-lg" />
+              }
+            />
+            <Bar
+              dataKey="hours"
+              fill="var(--color-hours)"
+              radius={[4, 4, 0, 0]}
+            >
               <LabelList
+                dataKey="hours"
                 position="top"
                 offset={5}
-                className="fill-popover"
+                className="fill-gray-400 text-xs"
                 fontSize={12}
               />
             </Bar>

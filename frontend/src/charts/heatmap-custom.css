@@ -1,0 +1,41 @@
+/* Custom styling for react-calendar-heatmap to match Tailwind slate theme */
+.react-calendar-heatmap text {
+  font-size: 9px;
+  fill: #64748b; /* slate-500 */
+}
+
+.react-calendar-heatmap rect {
+  rx: 3px;
+  ry: 3px;
+  shape-rendering: crispEdges;
+}
+
+/* Empty days / No commits */
+.react-calendar-heatmap .color-empty {
+  fill: #020617; /* slate-950 */
+  stroke: #1e293b; /* slate-800 */
+  stroke-width: 1px;
+}
+
+/* Contribution intensity levels */
+.react-calendar-heatmap .color-github-1 {
+  fill: #065f46; /* emerald-800 */
+}
+
+.react-calendar-heatmap .color-github-2 {
+  fill: #047857; /* emerald-700 */
+}
+
+.react-calendar-heatmap .color-github-3 {
+  fill: #059669; /* emerald-600 */
+}
+
+.react-calendar-heatmap .color-github-4 {
+  fill: #10b981; /* emerald-500 */
+}
+
+/* Hover effect on squares */
+.react-calendar-heatmap rect:hover {
+  stroke: #cbd5e1; /* slate-300 */
+  stroke-width: 1px;
+}

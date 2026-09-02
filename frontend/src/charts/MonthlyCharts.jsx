@@ -1,67 +1,70 @@
-import { TrendingUp } from "lucide-react";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  LabelList,
-} from "recharts";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
 const chartData = [
-  { month: "Jan", desktop: 186 },
-  { month: "Feb", desktop: 305 },
-  { month: "Mar", desktop: 237 },
-  { month: "Apr", desktop: 73 },
-
+  { month: "Jan", hours: 30 },
+  { month: "Feb", hours: 45 },
+  { month: "Mar", hours: 38 },
+  // ... more months
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "var(--chart-1)",
+  hours: {
+    label: "Hours",
+    color: "#a78bfa", // purple-400
   },
 };
 
-export default function MonthlyCharts() {
+export default function MonthlyChart() {
   return (
-    <Card className="border border-slate-950 ">
-      <CardHeader>
-        <CardTitle>Monthly Coding Hours</CardTitle>
+    <Card className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-lg font-semibold text-gray-200">
+          Monthly Coding Hours
+        </CardTitle>
       </CardHeader>
-
-      <CardContent className="">
-        <ChartContainer config={chartConfig} className="h-50 w-full">
-          <BarChart data={chartData}>
-            <CartesianGrid vertical={false} horizontal={false} />
-
+      <CardContent>
+        <ChartContainer config={chartConfig} className="h-48 w-full">
+          <LineChart
+            data={chartData}
+            margin={{ top: 5, right: 10, left: 0, bottom: 5 }}
+          >
+            <CartesianGrid
+              vertical={false}
+              strokeDasharray="3 3"
+              stroke="#334155"
+            />
             <XAxis
               dataKey="month"
               tickLine={false}
-              tickMargin={10}
               axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
+              tickMargin={10}
+              tick={{ fill: "#94a3b8", fontSize: 12 }}
             />
-
-            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4}>
-              <LabelList
-                position="top"
-                offset={5}
-                className="fill-popover"
-                fontSize={12}
-              />
-            </Bar>
-          </BarChart>
+            <YAxis
+              tickLine={false}
+              axisLine={false}
+              tickMargin={10}
+              tick={{ fill: "#94a3b8", fontSize: 12 }}
+            />
+            <ChartTooltip
+              content={
+                <ChartTooltipContent className="bg-slate-800 border-slate-700" />
+              }
+            />
+            <Line
+              type="monotone"
+              dataKey="hours"
+              stroke="var(--color-hours)"
+              strokeWidth={3}
+              dot={{ fill: "var(--color-hours)", strokeWidth: 2, r: 4 }}
+            />
+          </LineChart>
         </ChartContainer>
       </CardContent>
     </Card>
